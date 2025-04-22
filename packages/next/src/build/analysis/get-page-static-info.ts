@@ -303,9 +303,7 @@ async function tryToReadFile(filePath: string, shouldThrow: boolean) {
     if (shouldThrow) {
       throw new Error(
         `Next.js failed to read file ${filePath} for getting static info`,
-        {
-          cause: error,
-        }
+        { cause: error }
       )
     }
   }
